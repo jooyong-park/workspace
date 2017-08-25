@@ -70,6 +70,16 @@ $ sysctl -w kernel.pid_max=4194303(2^22 64bit max pid value)
 -	ulimit는 프로세스의 자원 한도를 설정하는 명령
 -	soft한도와 hard한도 두가지 sof t : 새로운 프로그램을 생성하면 기본으로 적용되는 한도 hard : 소프트한도에서 최대로 늘릴 수 있는 한도
 
-### 6. ulimit 명령어 - 사용법 ulimit [옵션] 값 - 옵션 - a : 모든 제한 사항을 보여줌. -c : 최대 코어 파일 사이즈 -d : 프로세스 데이터 세그먼트의 최대 크기 -f : shell에 의해 만들어질 수 있는 파일의 최대 크기 -s : 최대 스택 크기 -p : 파이프 크기 -n : 오픈 파일의 최대수 -u : 오픈파일의 최대수 -v : 최대 가상메모리의 양 -S : soft 한도 -H : hard 한도 ulimit -n 100000 최대 오픈 파일
+### 6. ulimit 명령어
 
-ulimit -u 변경 반영 안되어 --> sudo vi /etc/security/limit.conf 사용자명 hard nproc 개수 사용자명 soft nproc 개수
+-	사용법 ulimit [옵션] 값
+-	옵션
+
+	-	a : 모든 제한 사항을 보여줌. -c : 최대 코어 파일 사이즈 -d : 프로세스 데이터 세그먼트의 최대 크기 -f : shell에 의해 만들어질 수 있는 파일의 최대 크기 -s : 최대 스택 크기 -p : 파이프 크기 -n : 오픈 파일의 최대수 -u : 오픈파일의 최대수 -v : 최대 가상메모리의 양 -S : soft 한도 -H : hard 한도
+
+-	ulimit -n 100000 최대 오픈 파일
+
+-	ulimit -u 값 -->변경 반영 안됨 -> sudo vi /etc/security/limit.conf 사용자명 hard nproc 개수 사용자명 soft nproc 개수 리부팅 시 해당 내용 적용
+
+-	ulimit -a -Sa -Ha로 변경 값 확인
+
