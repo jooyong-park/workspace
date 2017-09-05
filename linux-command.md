@@ -1,3 +1,5 @@
+https://zetawiki.com/wiki/%EC%A3%BC%EC%9A%94_%EB%A6%AC%EB%88%85%EC%8A%A4_%EB%AA%85%EB%A0%B9%EC%96%B4
+
 tee
 ---
 
