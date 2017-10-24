@@ -1,0 +1,1935 @@
+## Loading kernel from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x2008012c
+     Data Size:    1892704 Bytes = 1.8 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x40008000
+     Entry Point:  0x40008000
+     Hash algo:    sha1
+     Hash value:   754f955915d9422739414221b961712f9daceaf6
+   Verifying Hash Integrity ... sha1+ OK
+## Loading ramdisk from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'ramdisk@1' ramdisk subimage
+     Description:  obmc-phosphor-initramfs
+     Type:         RAMDisk Image
+     Compression:  lzma compressed
+     Data Start:   0x20253ba4
+     Data Size:    1584532 Bytes = 1.5 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: unavailable
+     Entry Point:  unavailable
+     Hash algo:    sha1
+     Hash value:   611cf14c5b9901d0e19b18c1a1a469c63042e1df
+   Verifying Hash Integrity ... sha1+ OK
+## Loading fdt from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'fdt@1' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x2024e380
+     Data Size:    22371 Bytes = 21.8 KiB
+     Architecture: ARM
+     Hash algo:    sha1
+     Hash value:   b458ae7f494564403c595ae32902c6edabce0489
+   Verifying Hash Integrity ... sha1+ OK
+   Booting using the fdt blob at 0x2024e380
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 4f214000, end 4f396d94 ... OK
+   Loading Device Tree to 4f20b000, end 4f213762 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.10.17-703c3c181790b20c48c4d02b9fed901379671fb7 (funnystory@open7
+[    0.000000] CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=0005317f
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] OF: fdt:Machine model: Barrelye BMC
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] SOC Rev: 02010303
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 62992
+[    0.000000] Kernel command line: console=ttyS4,115200n8 root=/dev/ram rw
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 242472K/253952K available (4096K kernel code, 277K rwdata, 1104K rodata)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0x90000000 - 0xff800000   (1784 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x8f800000   ( 248 MB)
+[    0.000000]       .text : 0x80008000 - 0x80500000   (5088 kB)
+[    0.000000]       .init : 0x80700000 - 0x80800000   (1024 kB)
+[    0.000000]       .data : 0x80800000 - 0x808455a8   ( 278 kB)
+[    0.000000]        .bss : 0x808455a8 - 0x80861560   ( 112 kB)
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] i2c controller registered, irq 16
+[    0.000000] clocksource: moxart_timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_nss
+[    0.000000] sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 214748364750s
+[    0.070000] Calibrating delay loop... 190.87 BogoMIPS (lpj=954368)
+[    0.070000] pid_max: default: 32768 minimum: 301
+[    0.070000] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.070000] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.070000] CPU: Testing write buffer coherency: ok
+[    0.070000] ftrace: allocating 14748 entries in 44 pages
+[    0.130000] Setting up static identity map for 0x40100000 - 0x40100058
+[    0.140000] devtmpfs: initialized
+[    0.180000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 191s
+[    0.180000] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.180000] pinctrl core: initialized pinctrl subsystem
+[    0.180000] NET: Registered protocol family 16
+[    0.180000] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.280000] clocksource: Switched to clocksource moxart_timer
+[    0.320000] NET: Registered protocol family 2
+[    0.320000] TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.320000] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.320000] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.320000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.320000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.320000] NET: Registered protocol family 1
+[    0.320000] Trying to unpack rootfs image as initramfs...
+[    4.910000] Freeing initrd memory: 1548K
+[    4.910000] workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[    4.910000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    4.910000] jffs2: version 2.2. (NAND) (SUMMARY)  �© 2001-2006 Red Hat, Inc.
+[    4.910000] io scheduler noop registered (default)
+[    4.910000] ipmi-bt-host 1e789140.ibt: Found bt bmc device
+[    4.910000] ipmi-bt-host 1e789140.ibt: Using IRQ 21
+[    4.910000] Serial: 8250/16550 driver, 6 ports, IRQ sharing enabled
+[    4.910000] 1e787000.vuart: ttyS5 at MMIO 0x1e787000 (irq = 21, base_baud = 1500000) is a 1A
+[    4.910000] 1e784000.serial: ttyS4 at MMIO 0x1e784000 (irq = 22, base_baud = 1500000) is a A
+[    5.160000] console [ttyS4] enabled
+[    5.600000] timeriomem_rng 1e6e2078.hwrng: 32bits from 0xf00e2078 @ 1us
+[    5.630000] random: fast init done
+[    5.670000] brd: module loaded
+[    5.710000] loop: module loaded
+[    5.720000] aspeed-smc 1e620000.fmc: Using IRQ 18
+[    5.730000] aspeed-smc 1e620000.fmc: DMA support disabled.
+[    5.730000] aspeed-smc 1e620000.fmc: n25q256a (32768 Kbytes)
+[    5.730000] aspeed-smc 1e620000.fmc: CE0 window [ 0x20000000 - 0x22000000 ] 32MB
+[    5.750000] aspeed-smc 1e620000.fmc: CE1 window [ 0x22000000 - 0x26000000 ] 64MB
+[    5.750000] 5 ofpart partitions found on MTD device bmc
+[    5.750000] Creating 5 MTD partitions on "bmc":
+[    5.780000] 0x000000000000-0x000000060000 : "u-boot"
+[    5.780000] 0x000000060000-0x000000080000 : "u-boot-env"
+[    5.800000] 0x000000080000-0x0000004c0000 : "kernel"
+[    5.810000] 0x0000004c0000-0x000001c00000 : "rofs"
+[    5.820000] 0x000001c00000-0x000002000000 : "rwfs"
+[    5.830000] random: crng init done
+[    5.850000] aspeed-smc 1e630000.spi: unrecognized JEDEC id bytes: 00, 00, 00
+[    5.850000] aspeed-smc 1e630000.spi: Aspeed SMC probe failed -2
+[    5.880000] aspeed-smc: probe of 1e630000.spi failed with error -2
+[    5.880000] libphy: Fixed MDIO Bus: probed
+[    5.900000] ftgmac100 1e660000.ethernet: Generated random MAC address 1e:94:35:0d:61:0a
+[    5.900000] ftgmac100 1e660000.ethernet: Using NCSI interface
+[    5.900000] ftgmac100 1e660000.ethernet eth0: irq 19, mapped at f0060000
+[    5.930000] i2c /dev entries driver
+[    5.980000] rtc-ds1307: probe of 0-0068 failed with error -5
+[    5.990000] aspeed-i2c-bus 1e78a040.i2c-bus: i2c bus 0 registered, irq 23
+[    5.990000] aspeed-i2c-bus 1e78a100.i2c-bus: i2c bus 3 registered, irq 24
+[    6.030000] aspeed-i2c-bus 1e78a140.i2c-bus: i2c bus 4 registered, irq 25
+[    6.030000] aspeed-i2c-bus 1e78a180.i2c-bus: i2c bus 5 registered, irq 26
+[    6.110000] aspeed-i2c-bus 1e78a1c0.i2c-bus: i2c bus 6 registered, irq 27
+[    6.110000] Driver for 1-wire Dallas network protocol.
+[    6.130000] adm1275 4-0010: Failed to read Manufacturer ID
+[    6.140000] adm1275 5-0010: Failed to read Manufacturer ID
+[    6.150000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    6.150000] NET: Registered protocol family 10
+[    6.170000] Segment Routing with IPv6
+[    6.170000] NET: Registered protocol family 17
+[    6.170000] 8021q: 802.1Q VLAN Support v1.8
+[    6.170000] hctosys: unable to open rtc device (rtc0)
+[    6.200000] Freeing unused kernel memory: 1024K
+rofs = mtd4 squashfs rwfs = mtd5 jffs2
+[    7.290000] jffs2: notice: (430) jffs2_build_xattr_subsystem: complete building xattr subsy.
+[   11.600000] systemd[1]: System time before build time, advancing clock.
+[   11.770000] systemd[1]: systemd 232 running in system mode. (+PAM -AUDIT -SELINUX -IMA -APP)
+[   11.810000] systemd[1]: Detected architecture arm.
+
+Welcome to Phosphor OpenBMC (Phosphor OpenBMC Project Reference Distro) v1.99.10-158!
+
+[   11.870000] systemd[1]: Set hostname to <barreleye>.
+[   13.230000] systemd[1]: Cannot add dependency obmc-sync-inventory-item@system-chassis-io_bot
+[   14.180000] systemd[1]: Listening on Syslog Socket.
+[  OK  ] Listening on Syslog Socket.
+[   14.410000] systemd[1]: Listening on udev Kernel Socket.
+[  OK  ] Listening on udev Kernel Socket.
+[   14.450000] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+[   14.490000] systemd[1]: Listening on udev Control Socket.
+[  OK  ] Listening on udev Control Socket.
+[   14.530000] systemd[1]: Reached target Swap.
+[  OK  ] Reached target Swap.
+[   14.560000] systemd[1]: Listening on Network Service Netlink Socket.
+[  OK  ] Listening on Network Service Netlink Socket.
+[  OK  ] Reached target Fans Ready.
+[  OK  ] Listening on Process Core Dump Socket.
+[  OK  ] Started Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Listening on Journal Socket.
+[  OK  ] Listening on Journal Socket (/dev/log).
+[  OK  ] Started Forward Password Requests to Wall Directory Watch.
+[  OK  ] Reached target Paths.
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Created slice System Slice.
+[  OK  ] Created slice system-obmc\x2dconsole.slice.
+[  OK  ] Created slice system-org.openbmc.buttons.reset.slice.
+         Mounting Temporary Directory...
+         Starting Journal Service...
+[  OK  ] Created slice system-org.openbmc.control.Host.slice.
+[  OK  ] Created slice system-obmc\x2dflash\x2dbmc\x2dsetenv.slice.
+[  OK  ] Created slice system-obmc\x2dsync\x2dinventory\x2ditem.slice.
+[  OK  ] Created slice system-org.openbmc.control.Bmc.slice.
+[  OK  ] Created slice system-obmc\x2dled\x2dgroup\x2dstart.slice.
+[  OK  ] Created slice system-org.openbmc.control.Chassis.slice.
+[  OK  ] Created slice system-phosphor\x2dreset\x2dhost\x2drunning.slice.
+[  OK  ] Created slice system-org.openbmc.buttons.Power.slice.
+[  OK  ] Reached target Slices.
+         Starting Remount Root and Kernel File Systems...
+[  OK  ] Created slice system-org.openbmc.control.Power.slice.
+         Starting Apply Kernel Variables...
+[  OK  ] Created slice system-phosphor\x2ddiscover\x2dsystem\x2dstate.slice.
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Created slice system-phosphor\x2dreset\x2dhost\x2dcheck.slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+         Starting udev Coldplug all Devices...
+[  OK  ] Created slice system-mapper\x2dwait.slice.
+[  OK  ] Created slice system-op\x2dreset\x2dchassis\x2don.slice.
+         Mounting Debug File System...
+[  OK  ] Created slice system-op\x2dreset\x2dchassis\x2drunning.slice.
+[   16.820000] systemd[1]: dev-hugepages.mount: Couldn't determine result for ConditionVirtualy
+[   16.820000] systemd[1]: Created slice system-obmc\x2dread\x2deeprom.slice.
+[  OK  ] Created slice system-obmc\x2dread\x2deeprom.slice.
+[   16.970000] systemd[1]: Mounted Debug File System.
+[  OK  ] Mounted Debug File System.
+[   17.130000] systemd[1]: Mounted Temporary Directory.
+[  OK  ] Mounted Temporary Directory.
+[   17.300000] systemd[1]: Started Journal Service.
+[  OK  ] Started Journal Service.
+[  OK  ] Started Remount Root and Kernel File Systems.
+[  OK  ] Started Apply Kernel Variables.
+         Starting Create Static Device Nodes in /dev...
+         Starting Flush Journal to Persistent Storage...
+[   18.080000] systemd-journald[450]: Received request to flush runtime journal from PID 1
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Started Create Static Device Nodes in /dev.
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /var/volatile...
+         Starting udev Kernel Device Manager...
+[  OK  ] Mounted /var/volatile.
+         Starting Load/Save Random Seed...
+[  OK  ] Reached target Local File Systems.
+         Starting Create Volatile Files and Directories...
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started Create Volatile Files and Directories.
+         Starting Network Time Synchronization...
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on Phosphor DBUS Browser socket.
+[  OK  ] Listening on phosphor-ipmi-net.socket.
+[  OK  ] Listening on Phosphor Webserver socket.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Listening on Phosphor Host Console SSH Per-Connection socket.
+[  OK  ] Listening on dropbear.socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+[  OK  ] Started Phosphor Dump core monitor..
+         Starting Phosphor Download Manager...
+         Starting Phosphor BMC0 Control...
+         Starting Phosphor Log Manager...
+         Starting Phosphor Fan Control...
+[  OK  ] Started D-Bus System Message Bus.
+[  OK  ] Started Phosphor Fan Control.
+[  OK  ] Reached target Fan Control.
+         Starting Network Service...
+[  OK  ] Started Kernel Logging Service.
+         Starting Set U-Boot environment variable...
+[  OK  ] Reached target Containers.
+         Starting Phosphor Inventory Manager...
+         Starting Sync system/chassis/motherboard...
+[  OK  ] Started System Logging Service.
+         Starting Phosphor Download Manager...
+[  OK  ] Started Hardware RNG Entropy Gatherer Daemon.
+         Starting Phosphor Dump Manager...
+         Starting Clear one time boot overrides...
+         Starting Phosphor DBus Service Discovery Manager...
+         Starting Phosphor Chassis0 Control...
+         Starting Phosphor Settings Daemon...
+         Starting Avahi mDNS/DNS-SD Stack...
+         Starting Phosphor IPMI BT DBus Bridge...
+         Starting Phosphor User Manager...
+         Starting Phosphor Sensor Manager...
+         Starting Phosphor Network Manager...
+         Starting Phosphor LED Group Management Daemon...
+         Starting Phosphor Inventory Manager...
+[  OK  ] Reached target System Time Synchronized.
+[  OK  ] Started Clear one time boot overrides.
+[   34.570000] 8021q: adding VLAN 0 to HW filter on device eth0
+[  OK  ] Started Network Service.
+[   37.120000] ftgmac100 1e660000.ethernet eth0: NCSI interface down
+[  OK  ] Started Set U-Boot environment variable.
+[  OK  ] Found device /dev/ttyS4.
+[  OK  ] Found device /dev/ttyVUART0.
+[  OK  ] Started Phosphor IPMI BT DBus Bridge.
+[  OK  ] Started Phosphor Log Manager.
+[  OK  ] Started Phosphor LED Group Management Daemon.
+[  OK  ] Started Phosphor Download Manager.
+[  OK  ] Started Phosphor Settings Daemon.
+[  OK  ] Started Phosphor Dump Manager.
+[  OK  ] Started Phosphor Inventory Manager.
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+[  OK  ] Created slice system-xyz.openbmc_project.led.controller.slice.
+[  OK  ] Started Phosphor sysfs LED controller.
+[  OK  ] Started Phosphor sysfs LED controller.
+[  OK  ] Started Phosphor sysfs LED controller.
+[  OK  ] Started Phosphor sysfs LED controller.
+[  OK  ] Started Phosphor Console Muxer listening on device /dev/ttyVUART0.
+60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 41 42    ..............AB
+
+DRAM Init-DDR3
+CBR0-1357135670123456701234567
+CBR134Done
+
+DRAM Init-DDR3
+CBR0-1357135670123456701234567
+CBR134Done
+
+
+U-Boot 2016.07 (Oct 19 2017 - 12:45:24 +0900)
+
+DRAM:  248 MiB
+WARNING: Caches not enabled
+Flash: 32 MiB
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   aspeednic#0
+Error: aspeednic#0 address not set.
+
+Hit any key to stop autoboot:  0 
+## Loading kernel from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x2008012c
+     Data Size:    1892704 Bytes = 1.8 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x40008000
+     Entry Point:  0x40008000
+     Hash algo:    sha1
+     Hash value:   754f955915d9422739414221b961712f9daceaf6
+   Verifying Hash Integrity ... sha1+ OK
+## Loading ramdisk from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'ramdisk@1' ramdisk subimage
+     Description:  obmc-phosphor-initramfs
+     Type:         RAMDisk Image
+     Compression:  lzma compressed
+     Data Start:   0x20253ba4
+     Data Size:    1584532 Bytes = 1.5 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: unavailable
+     Entry Point:  unavailable
+     Hash algo:    sha1
+     Hash value:   611cf14c5b9901d0e19b18c1a1a469c63042e1df
+   Verifying Hash Integrity ... sha1+ OK
+## Loading fdt from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'fdt@1' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x2024e380
+     Data Size:    22371 Bytes = 21.8 KiB
+     Architecture: ARM
+     Hash algo:    sha1
+     Hash value:   b458ae7f494564403c595ae32902c6edabce0489
+   Verifying Hash Integrity ... sha1+ OK
+   Booting using the fdt blob at 0x2024e380
+   Loading Kernel Image ... 
+DRAM Init-DDR3
+CBR0-1357135670123456701234567
+CBR134Done
+
+
+U-Boot 2016.07 (Oct 19 2017 - 12:45:24 +0900)
+
+DRAM:  248 MiB
+WARNING: Caches not enabled
+Flash: 32 MiB
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   aspeednic#0
+Error: aspeednic#0 address not set.
+
+Hit any key to stop autoboot:  0 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# 
+ast# print
+baudrate=115200
+bootargs=console=ttyS4,115200n8 root=/dev/ram rw
+bootcmd=fdt addr 20080000; if fdt get value ramdisk_conf /configurations/conf@1 ramdisk; then i
+bootdelay=2
+ethact=aspeednic#0
+spi_dma=yes
+stderr=serial
+stdin=serial
+stdout=serial
+verify=yes
+
+Environment size: 328/65531 bytes
+ast# setenv ethaddr 00:01:73:02:48:9F
+ast# saveenv
+Saving Environment to Flash...
+Un-Protected 1 sectors
+Un-Protected 1 sectors
+Erasing Flash...
+. done
+Erased 1 sectors
+Writing to Flash... done
+Protected 1 sectors
+Protected 1 sectors
+ast# print
+baudrate=115200
+bootargs=console=ttyS4,115200n8 root=/dev/ram rw
+bootcmd=fdt addr 20080000; if fdt get value ramdisk_conf /configurations/conf@1 ramdisk; then i
+bootdelay=2
+ethact=aspeednic#0
+ethaddr=00:01:73:02:48:9F
+spi_dma=yes
+stderr=serial
+stdin=serial
+stdout=serial
+verify=yes
+
+Environment size: 356/65531 bytes
+ast# reset
+resetting ...
+
+
+U-Boot 2016.07 (Oct 19 2017 - 12:45:24 +0900)
+
+DRAM:  248 MiB
+WARNING: Caches not enabled
+Flash: 32 MiB
+In:    serial
+Out:   serial
+Err:   serial
+Net:   aspeednic#0
+Hit any key to stop autoboot:  0 
+## Loading kernel from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x2008012c
+     Data Size:    1892704 Bytes = 1.8 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x40008000
+     Entry Point:  0x40008000
+     Hash algo:    sha1
+     Hash value:   754f955915d9422739414221b961712f9daceaf6
+   Verifying Hash Integrity ... sha1+ OK
+## Loading ramdisk from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'ramdisk@1' ramdisk subimage
+     Description:  obmc-phosphor-initramfs
+     Type:         RAMDisk Image
+     Compression:  lzma compressed
+     Data Start:   0x20253ba4
+     Data Size:    1584532 Bytes = 1.5 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: unavailable
+     Entry Point:  unavailable
+     Hash algo:    sha1
+     Hash value:   611cf14c5b9901d0e19b18c1a1a469c63042e1df
+   Verifying Hash Integrity ... sha1+ OK
+## Loading fdt from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'fdt@1' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x2024e380
+     Data Size:    22371 Bytes = 21.8 KiB
+     Architecture: ARM
+     Hash algo:    sha1
+     Hash value:   b458ae7f494564403c595ae32902c6edabce0489
+   Verifying Hash Integrity ... sha1+ OK
+   Booting using the fdt blob at 0x2024e380
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 4f214000, end 4f396d94 ... OK
+   Loading Device Tree to 4f20b000, end 4f213762 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.10.17-703c3c181790b20c48c4d02b9fed901379671fb7 (funnystory@open7
+[    0.000000] CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=0005317f
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] OF: fdt:Machine model: Barrelye BMC
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] SOC Rev: 02010303
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 62992
+[    0.000000] Kernel command line: console=ttyS4,115200n8 root=/dev/ram rw
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 242472K/253952K available (4096K kernel code, 277K rwdata, 1104K rodata)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0x90000000 - 0xff800000   (1784 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x8f800000   ( 248 MB)
+[    0.000000]       .text : 0x80008000 - 0x80500000   (5088 kB)
+[    0.000000]       .init : 0x80700000 - 0x80800000   (1024 kB)
+[    0.000000]       .data : 0x80800000 - 0x808455a8   ( 278 kB)
+[    0.000000]        .bss : 0x808455a8 - 0x80861560   ( 112 kB)
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] i2c controller registered, irq 16
+[    0.000000] clocksource: moxart_timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_nss
+[    0.000000] sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 214748364750s
+[    0.070000] Calibrating delay loop... 190.87 BogoMIPS (lpj=954368)
+[    0.070000] pid_max: default: 32768 minimum: 301
+[    0.070000] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.070000] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.070000] CPU: Testing write buffer coherency: ok
+[    0.070000] ftrace: allocating 14748 entries in 44 pages
+[    0.130000] Setting up static identity map for 0x40100000 - 0x40100058
+[    0.140000] devtmpfs: initialized
+[    0.170000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 191s
+[    0.170000] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.180000] pinctrl core: initialized pinctrl subsystem
+[    0.180000] NET: Registered protocol family 16
+[    0.180000] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.270000] clocksource: Switched to clocksource moxart_timer
+[    0.310000] NET: Registered protocol family 2
+[    0.310000] TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.310000] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.310000] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.310000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.310000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.310000] NET: Registered protocol family 1
+[    0.310000] Trying to unpack rootfs image as initramfs...
+[    4.710000] Freeing initrd memory: 1548K
+[    4.710000] workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[    4.710000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    4.710000] jffs2: version 2.2. (NAND) (SUMMARY)  �© 2001-2006 Red Hat, Inc.
+[    4.710000] io scheduler noop registered (default)
+[    4.960000] ipmi-bt-host 1e789140.ibt: Found bt bmc device
+[    4.960000] ipmi-bt-host 1e789140.ibt: Using IRQ 21
+[    4.960000] Serial: 8250/16550 driver, 6 ports, IRQ sharing enabled
+[    4.960000] 1e787000.vuart: ttyS5 at MMIO 0x1e787000 (irq = 21, base_baud = 1500000) is a 1A
+[    4.960000] 1e784000.serial: ttyS4 at MMIO 0x1e784000 (irq = 22, base_baud = 1500000) is a A
+[    5.220000] console [ttyS4] enabled
+[    5.520000] timeriomem_rng 1e6e2078.hwrng: 32bits from 0xf00e2078 @ 1us
+[    5.540000] random: fast init done
+[    5.610000] brd: module loaded
+[    5.620000] random: crng init done
+[    5.650000] loop: module loaded
+[    5.660000] aspeed-smc 1e620000.fmc: Using IRQ 18
+[    5.660000] aspeed-smc 1e620000.fmc: DMA support disabled.
+[    5.670000] aspeed-smc 1e620000.fmc: n25q256a (32768 Kbytes)
+[    5.670000] aspeed-smc 1e620000.fmc: CE0 window [ 0x20000000 - 0x22000000 ] 32MB
+[    5.670000] aspeed-smc 1e620000.fmc: CE1 window [ 0x22000000 - 0x26000000 ] 64MB
+[    5.690000] 5 ofpart partitions found on MTD device bmc
+[    5.690000] Creating 5 MTD partitions on "bmc":
+[    5.690000] 0x000000000000-0x000000060000 : "u-boot"
+[    5.720000] 0x000000060000-0x000000080000 : "u-boot-env"
+[    5.740000] 0x000000080000-0x0000004c0000 : "kernel"
+[    5.740000] 0x0000004c0000-0x000001c00000 : "rofs"
+[    5.750000] 0x000001c00000-0x000002000000 : "rwfs"
+[    5.780000] aspeed-smc 1e630000.spi: unrecognized JEDEC id bytes: 00, 00, 00
+[    5.790000] aspeed-smc 1e630000.spi: Aspeed SMC probe failed -2
+[    5.810000] aspeed-smc: probe of 1e630000.spi failed with error -2
+[    5.810000] libphy: Fixed MDIO Bus: probed
+[    5.840000] ftgmac100 1e660000.ethernet: Read MAC address 00:01:73:02:48:9f from chip
+[    5.840000] ftgmac100 1e660000.ethernet: Using NCSI interface
+[    5.840000] ftgmac100 1e660000.ethernet eth0: irq 19, mapped at f0060000
+[    5.840000] i2c /dev entries driver
+[    5.920000] rtc-ds1307: probe of 0-0068 failed with error -5
+[    5.920000] aspeed-i2c-bus 1e78a040.i2c-bus: i2c bus 0 registered, irq 23
+[    5.930000] aspeed-i2c-bus 1e78a100.i2c-bus: i2c bus 3 registered, irq 24
+[    5.980000] aspeed-i2c-bus 1e78a140.i2c-bus: i2c bus 4 registered, irq 25
+[    5.980000] aspeed-i2c-bus 1e78a180.i2c-bus: i2c bus 5 registered, irq 26
+[    6.050000] aspeed-i2c-bus 1e78a1c0.i2c-bus: i2c bus 6 registered, irq 27
+[    6.050000] Driver for 1-wire Dallas network protocol.
+[    6.070000] adm1275 4-0010: Failed to read Manufacturer ID
+[    6.080000] adm1275 5-0010: Failed to read Manufacturer ID
+[    6.090000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    6.090000] NET: Registered protocol family 10
+[    6.110000] Segment Routing with IPv6
+[    6.110000] NET: Registered protocol family 17
+[    6.110000] 8021q: 802.1Q VLAN Support v1.8
+[    6.110000] hctosys: unable to open rtc device (rtc0)
+[    6.140000] Freeing unused kernel memory: 1024K
+rofs = mtd4 squashfs rwfs = mtd5 jffs2
+[    8.150000] jffs2: notice: (431) jffs2_build_xattr_subsystem: complete building xattr subsy.
+[   20.110000] systemd[1]: System time before build time, advancing clock.
+[   20.110000] systemd[1]: systemd 232 running in system mode. (+PAM -AUDIT -SELINUX -IMA -APP)
+[   20.110000] systemd[1]: Detected architecture arm.
+
+Welcome to Phosphor OpenBMC (Phosphor OpenBMC Project Reference Distro) v1.99.10-158!
+
+[   20.790000] systemd[1]: Set hostname to <barreleye>.
+[   21.850000] systemd[1]: Initializing machine ID from random generator.
+[   24.890000] systemd[1]: Cannot add dependency obmc-sync-inventory-item@system-chassis-io_bot
+[   25.700000] systemd[1]: Listening on Process Core Dump Socket.
+[  OK  ] Listening on Process Core Dump Socket.
+[   26.110000] systemd[1]: Reached target Remote File Systems.
+[  OK  ] Reached target Remote File Systems.
+[   26.530000] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Started Dispatch Password Requests to Console Directory Watch.
+[   26.950000] systemd[1]: Created slice System Slice.
+[  OK  ] Created slice System Slice.
+[   27.380000] systemd[1]: Created slice system-phosphor\x2dreset\x2dhost\x2drunning.slice.
+[  OK  ] Created slice system-phosphor\x2dreset\x2dhost\x2drunning.slice.
+[   27.810000] systemd[1]: dev-hugepages.mount: Couldn't determine result for ConditionVirtualy
+[   27.810000] systemd[1]: Created slice system-op\x2dreset\x2dchassis\x2don.slice.
+[  OK  ] Created slice system-op\x2dreset\x2dchassis\x2don.slice.
+[   28.250000] systemd[1]: Created slice system-org.openbmc.buttons.reset.slice.
+[  OK  ] Created slice system-org.openbmc.buttons.reset.slice.
+[   28.690000] systemd[1]: Mounting Debug File System...
+         Mounting Debug File System...
+[   29.140000] systemd[1]: Reached target Slices.
+[  OK  ] Reached target Slices.
+[  OK  ] Created slice system-org.openbmc.control.Host.slice.
+[  OK  ] Created slice system-obmc\x2dread\x2deeprom.slice.
+[  OK  ] Created slice system-obmc\x2dflash\x2dbmc\x2dsetenv.slice.
+[  OK  ] Created slice system-org.openbmc.buttons.Power.slice.
+[   30.980000] systemd[1]: Created slice system-mapper\x2dwait.slice.
+[  OK  ] Created slice system-mapper\x2dwait.slice.
+[   31.030000] systemd[1]: Listening on Network Service Netlink Socket.
+[  OK  ] Listening on Network Service Netlink Socket.
+[   31.060000] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+[   31.090000] systemd[1]: Created slice system-org.openbmc.control.Power.slice.
+[  OK  ] Created slice system-org.openbmc.control.Power.slice.
+[   31.130000] systemd[1]: Created slice system-op\x2dreset\x2dchassis\x2drunning.slice.
+[  OK  ] Created slice system-op\x2dreset\x2dchassis\x2drunning.slice.
+[   31.180000] systemd[1]: Created slice system-org.openbmc.control.Bmc.slice.
+[  OK  ] Created slice system-org.openbmc.control.Bmc.slice.
+[   31.230000] systemd[1]: Listening on Syslog Socket.
+[  OK  ] Listening on Syslog Socket.
+[   31.290000] systemd[1]: Listening on Journal Socket (/dev/log).
+[  OK  ] Listening on Journal Socket (/dev/log).
+[   31.360000] systemd[1]: Created slice system-obmc\x2dled\x2dgroup\x2dstart.slice.
+[  OK  ] Created slice system-obmc\x2dled\x2dgroup\x2dstart.slice.
+[   31.430000] systemd[1]: Created slice system-obmc\x2dsync\x2dinventory\x2ditem.slice.
+[  OK  ] Created slice system-obmc\x2dsync\x2dinventory\x2ditem.slice.
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Created slice system-phosphor\x2dreset\x2dhost\x2dcheck.slice.
+[  OK  ] Created slice system-phosphor\x2ddiscover\x2dsystem\x2dstate.slice.
+[  OK  ] Reached target Fans Ready.
+[  OK  ] Listening on udev Control Socket.
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+[  OK  ] Listening on udev Kernel Socket.
+[  OK  ] Created slice system-obmc\x2dconsole.slice.
+[  OK  ] Created slice system-org.openbmc.control.Chassis.slice.
+[  OK  ] Started Forward Password Requests to Wall Directory Watch.
+[  OK  ] Reached target Paths.
+[  OK  ] Reached target Swap.
+         Mounting Temporary Directory...
+[  OK  ] Listening on Journal Socket.
+         Starting Apply Kernel Variables...
+         Starting Journal Service...
+         Starting udev Coldplug all Devices...
+         Starting Remount Root and Kernel File Systems...
+[  OK  ] Mounted Debug File System.
+[  OK  ] Mounted Temporary Directory.
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Started Remount Root and Kernel File Systems.
+         Starting Create System Users...
+[  OK  ] Started Create System Users.
+[  OK  ] Started Journal Service.
+         Starting Flush Journal to Persistent Storage...
+         Starting Create Static Device Nodes in /dev...
+[   36.190000] systemd-journald[456]: Received request to flush runtime journal from PID 1
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Started Create Static Device Nodes in /dev.
+[  OK  ] Started udev Coldplug all Devices.
+         Starting udev Kernel Device Manager...
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /var/volatile...
+[  OK  ] Mounted /var/volatile.
+         Starting Load/Save Random Seed...
+[  OK  ] Reached target Local File Systems.
+         Starting Create Volatile Files and Directories...
+         Starting Rebuild Journal Catalog...
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started Rebuild Journal Catalog.
+         Starting Update is Completed...
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Started Create Volatile Files and Directories.
+[  OK  ] Found device /dev/ttyVUART0.
+[  OK  ] Started Update is Completed.
+[  OK  ] Found device /dev/ttyS4.
+[  OK  ] Created slice system-xyz.openbmc_project.led.controller.slice.
+[  OK  ] Created slice system-xyz.openbmc_project.Hwmon.slice.
+         Starting Network Time Synchronization...
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on Phosphor DBUS Browser socket.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on Phosphor Host Console SSH Per-Connection socket.
+[  OK  ] Listening on Phosphor Webserver socket.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Listening on phosphor-ipmi-net.socket.
+[  OK  ] Listening on dropbear.socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting Phosphor Settings Daemon...
+         Starting Phosphor Chassis0 Control...
+         Starting Phosphor Download Manager...
+         Starting Phosphor Dump Manager...
+         Starting Phosphor Network Manager...
+         Starting Phosphor BMC0 Control...
+         Starting Clear one time boot overrides...
+         Starting Phosphor Inventory Manager...
+[  OK  ] Started Phosphor sysfs LED controller.
+[  OK  ] Reached target Containers.
+[  OK  ] Started Phosphor Console Muxer listening on device /dev/ttyVUART0.
+         Starting Phosphor User Manager...
+         Starting Phosphor Log Manager...
+[  OK  ] Started Phosphor sysfs LED controller.
+         Starting Phosphor Sensor Manager...
+         Starting Phosphor DBus Service Discovery Manager...
+[  OK  ] Started D-Bus System Message Bus.
+[  OK  ] Started Phosphor Settings Daemon.
+         Starting Network Service...
+         Starting Avahi mDNS/DNS-SD Stack...
+         Starting Phosphor LED Group Management Daemon...
+         Starting Sync system/chassis/motherboard...
+         Starting Phosphor IPMI BT DBus Bridge...
+         Starting Phosphor Inventory Manager...
+[  OK  ] Started Kernel Logging Service.
+[  OK  ] Started Hardware RNG Entropy Gatherer Daemon.
+[  OK  ] Started System Logging Service.
+         Starting Phosphor Fan Control...
+         Starting SSH Key Generation...
+         Starting Phosphor Download Manager...
+[  OK  ] Started Phosphor Dump core monitor..
+         Starting Set U-Boot environment variable...
+[  OK  ] Started Phosphor sysfs LED controller.
+[  OK  ] Started Phosphor sysfs LED controller.
+[  OK  ] Reached target System Time Synchronized.
+[   68.210000] 8021q: adding VLAN 0 to HW filter on device eth0
+[  OK  ] Started Network Service.
+[  OK  ] Started Clear one time boot overrides.
+[  OK  ] Started Phosphor IPMI BT DBus Bridge.
+[  OK  ] Started Phosphor BMC0 Control.
+[  OK  ] Started Phosphor Log Manager.
+[  OK  ] Started Phosphor Inventory Manager.
+[  OK  ] Started Phosphor LED Group Management Daemon.
+[  OK  ] Started Phosphor Fan Control.
+[  OK  ] Reached target Fan Control.
+[  OK  ] Reached target Network.
+         Starting Permit User Sessions...
+[  OK  ] Started Lightweight SLP Server.
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started Serial Getty on ttyS4.
+[  OK  ] Reached target Login Prompts.
+[   70.410000] ftgmac100 1e660000.ethernet eth0: NCSI interface down
+[  OK  ] Started Phosphor Download Manager.
+[  OK  ] Started Phosphor Dump Manager.
+[  OK  ] Started Set U-Boot environment variable.
+         Starting Remount the ubi volume after a reboot...
+
+Phosphor OpenBMC (Phosphor OpenBMC Project Reference Distro) 0.1.0 barreleye ttyS4
+
+barreleye login: root
+Password: 
+
+Login incorrect
+barreleye login: root
+Password: 
+
+Login incorrect
+barreleye login: root
+Password: 
+root@barreleye:~# ls
+root@barreleye:~# i2cdetect -l
+i2c-3   i2c             1e78a100.i2c-bus                        I2C adapter
+i2c-6   i2c             1e78a1c0.i2c-bus                        I2C adapter
+i2c-4   i2c             1e78a140.i2c-bus                        I2C adapter
+i2c-0   i2c             1e78a040.i2c-bus                        I2C adapter
+i2c-5   i2c             1e78a180.i2c-bus                        I2C adapter
+root@barreleye:~# ls
+root@barreleye:~# 
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7 | VT102 | Offline | ttyUSB2                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7 | VT102 | Offline | ttyUSB2                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7 | VT102 | Offline | ttyUSB2                                                                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7 | VT102 | Offline | ttyUSB2                                                                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DRAM Init-DDR3
+CBR0-1357135670123456701234567
+CBR134Done
+
+
+U-Boot 2016.07 (Oct 19 2017 - 12:45:24 +0900)
+
+DRAM:  248 MiB
+WARNING: Caches not enabled
+Flash: 32 MiB
+In:    serial
+Out:   serial
+Err:   serial
+Net:   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7 | VT102 | Offline | ttyUSB2                                                                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aspeednic#0
+Hit any key to stop autoboot:  0 
+## Loading kernel from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x2008012c
+     Data Size:    1892704 Bytes = 1.8 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x40008000
+     Entry Point:  0x40008000
+     Hash algo:    sha1
+     Hash value:   754f955915d9422739414221b961712f9daceaf6
+   Verifying Hash Integrity ... sha1+ OK
+## Loading ramdisk from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'ramdisk@1' ramdisk subimage
+     Description:  obmc-phosphor-initramfs
+     Type:         RAMDisk Image
+     Compression:  lzma compressed
+     Data Start:   0x20253ba4
+     Data Size:    1584532 Bytes = 1.5 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: unavailable
+     Entry Point:  unavailable
+     Hash algo:    sha1
+     Hash value:   611cf14c5b9901d0e19b18c1a1a469c63042e1df
+   Verifying Hash Integrity ... sha1+ OK
+## Loading fdt from FIT Image at 20080000 ...
+   Using 'conf@1' configuration
+   Trying 'fdt@1' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x2024e380
+     Data Size:    22371 Bytes = 21.8 KiB
+     Architecture: ARM
+     Hash algo:    sha1
+     Hash value:   b458ae7f494564403c595ae32902c6edabce0489
+   Verifying Hash Integrity ... sha1+ OK
+   Booting using the fdt blob at 0x2024e380
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 4f214000, end 4f396d94 ... OK
+   Loading Device Tree to 4f20b000, end 4f213762 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.10.17-703c3c181790b20c48c4d02b9fed901379671fb7 (funnystory@open7
+[    0.000000] CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=0005317f
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] OF: fdt:Machine model: Barrelye BMC
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] SOC Rev: 02010303
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 62992
+[    0.000000] Kernel command line: console=ttyS4,115200n8 root=/dev/ram rw
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 242472K/253952K available (4096K kernel code, 277K rwdata, 1104K rodata)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0x90000000 - 0xff800000   (1784 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x8f800000   ( 248 MB)
+[    0.000000]       .text : 0x80008000 - 0x80500000   (5088 kB)
+[    0.000000]       .init : 0x80700000 - 0x80800000   (1024 kB)
+[    0.000000]       .data : 0x80800000 - 0x808455a8   ( 278 kB)
+[    0.000000]        .bss : 0x808455a8 - 0x80861560   ( 112 kB)
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] i2c controller registered, irq 16
+[    0.000000] clocksource: moxart_timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_nss
+[    0.000000] sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 214748364750s
+[    0.070000] Calibrating delay loop... 190.87 BogoMIPS (lpj=954368)
+[    0.070000] pid_max: default: 32768 minimum: 301
+[    0.070000] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.070000] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.070000] CPU: Testing write buffer coherency: ok
+[    0.070000] ftrace: allocating 14748 entries in 44 pages
+[    0.130000] Setting up static identity map for 0x40100000 - 0x40100058
+[    0.140000] devtmpfs: initialized
+[    0.180000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 191s
+[    0.180000] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.180000] pinctrl core: initialized pinctrl subsystem
+[    0.180000] NET: Registered protocol family 16
+[    0.180000] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.270000] clocksource: Switched to clocksource moxart_timer
+[    0.310000] NET: Registered protocol family 2
+[    0.310000] TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.310000] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.310000] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.310000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.310000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.310000] NET: Registered protocol family 1
+[    0.310000] Trying to unpack rootfs image as initramfs...
+[    4.710000] Freeing initrd memory: 1548K
+[    4.710000] workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[    4.710000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    4.710000] jffs2: version 2.2. (NAND) (SUMMARY)  �© 2001-2006 Red Hat, Inc.
+[    4.710000] io scheduler noop registered (default)
+[    4.960000] ipmi-bt-host 1e789140.ibt: Found bt bmc device
+[    4.960000] ipmi-bt-host 1e789140.ibt: Using IRQ 21
+[    4.960000] Serial: 8250/16550 driver, 6 ports, IRQ sharing enabled
+[    4.960000] 1e787000.vuart: ttyS5 at MMIO 0x1e787000 (irq = 21, base_baud = 1500000) is a 1A
+[    4.960000] 1e784000.serial: ttyS4 at MMIO 0x1e784000 (irq = 22, base_baud = 1500000) is a A
+[    5.220000] console [ttyS4] enabled
+[    5.520000] timeriomem_rng 1e6e2078.hwrng: 32bits from 0xf00e2078 @ 1us
+[    5.540000] random: fast init done
+[    5.600000] brd: module loaded
+[    5.640000] loop: module loaded
+[    5.650000] aspeed-smc 1e620000.fmc: Using IRQ 18
+[    5.660000] aspeed-smc 1e620000.fmc: DMA support disabled.
+[    5.660000] aspeed-smc 1e620000.fmc: n25q256a (32768 Kbytes)
+[    5.660000] aspeed-smc 1e620000.fmc: CE0 window [ 0x20000000 - 0x22000000 ] 32MB
+[    5.680000] aspeed-smc 1e620000.fmc: CE1 window [ 0x22000000 - 0x26000000 ] 64MB
+[    5.680000] 5 ofpart partitions found on MTD device bmc
+[    5.680000] Creating 5 MTD partitions on "bmc":
+[    5.710000] 0x000000000000-0x000000060000 : "u-boot"
+[    5.710000] random: crng init done
+[    5.720000] 0x000000060000-0x000000080000 : "u-boot-env"
+[    5.730000] 0x000000080000-0x0000004c0000 : "kernel"
+[    5.750000] 0x0000004c0000-0x000001c00000 : "rofs"
+[    5.750000] 0x000001c00000-0x000002000000 : "rwfs"
+[    5.780000] aspeed-smc 1e630000.spi: unrecognized JEDEC id bytes: 00, 00, 00
+[    5.780000] aspeed-smc 1e630000.spi: Aspeed SMC probe failed -2
+[    5.810000] aspeed-smc: probe of 1e630000.spi failed with error -2
+[    5.810000] libphy: Fixed MDIO Bus: probed
+[    5.830000] ftgmac100 1e660000.ethernet: Read MAC address 00:01:73:02:48:9f from chip
+[    5.830000] ftgmac100 1e660000.ethernet: Using NCSI interface
+[    5.830000] ftgmac100 1e660000.ethernet eth0: irq 19, mapped at f0060000
+[    5.860000] i2c /dev entries driver
+[    5.900000] rtc-ds1307: probe of 0-0068 failed with error -5
+[    5.910000] aspeed-i2c-bus 1e78a040.i2c-bus: i2c bus 0 registered, irq 23
+[    5.910000] aspeed-i2c-bus 1e78a100.i2c-bus: i2c bus 3 registered, irq 24
+[    5.960000] aspeed-i2c-bus 1e78a140.i2c-bus: i2c bus 4 registered, irq 25
+[    5.960000] aspeed-i2c-bus 1e78a180.i2c-bus: i2c bus 5 registered, irq 26
+[    6.040000] aspeed-i2c-bus 1e78a1c0.i2c-bus: i2c bus 6 registered, irq 27
+[    6.040000] Driver for 1-wire Dallas network protocol.
+[    6.060000] adm1275 4-0010: Failed to read Manufacturer ID
+[    6.070000] adm1275 5-0010: Failed to read Manufacturer ID
+[    6.080000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    6.080000] NET: Registered protocol family 10
+[    6.080000] Segment Routing with IPv6
+[    6.110000] NET: Registered protocol family 17
+[    6.110000] 8021q: 802.1Q VLAN Support v1.8
+[    6.110000] hctosys: unable to open rtc device (rtc0)
+[    6.110000] Freeing unused kernel memory: 1024K
+rofs = mtd4 squashfs rwfs = mtd5 jffs2
+[    8.910000] jffs2: notice: (431) jffs2_build_xattr_subsystem: complete building xattr subsy.
+[   13.040000] systemd[1]: System time before build time, advancing clock.
+[   13.040000] systemd[1]: systemd 232 running in system mode. (+PAM -AUDIT -SELINUX -IMA -APP)
+[   13.040000] systemd[1]: Detected architecture arm.
+
+Welcome to Phosphor OpenBMC (Phosphor OpenBMC Project Reference Distro) v1.99.10-158!
+
+[   13.540000] systemd[1]: Set hostname to <barreleye>.
+[   14.900000] systemd[1]: Cannot add dependency obmc-sync-inventory-item@system-chassis-io_bot
+[   15.850000] systemd[1]: Listening on Network Service Netlink Socket.
+[  OK  ] Listening on Network Service Netlink Socket.
+[   16.060000] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Started Dispatch Password Requests to Console Directory Watch.
+[   16.120000] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+[   16.160000] systemd[1]: Listening on Journal Socket (/dev/log).
+[  OK  ] Listening on Journal Socket (/dev/log).
+[   16.200000] systemd[1]: Listening on udev Kernel Socket.
+[  OK  ] Listening on udev Kernel Socket.
+[   16.240000] systemd[1]: Listening on udev Control Socket.
+[  OK  ] Listening on udev Control Socket.
+[  OK  ] Listening on Syslog Socket.
+[  OK  ] Reached target Swap.
+[  OK  ] Started Forward Password Requests to Wall Directory Watch.
+[  OK  ] Reached target Paths.
+[  OK  ] Listening on Journal Socket.
+[  OK  ] Reached target Fans Ready.
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Listening on Process Core Dump Socket.
+[  OK  ] Created slice System Slice.
+[  OK  ] Created slice system-obmc\x2dconsole.slice.
+[  OK  ] Created slice system-org.openbmc.control.Bmc.slice.
+[  OK  ] Created slice system-phosphor\x2dreset\x2dhost\x2drunning.slice.
+[  OK  ] Created slice system-org.openbmc.control.Chassis.slice.
+[  OK  ] Created slice system-phosphor\x2ddiscover\x2dsystem\x2dstate.slice.
+[  OK  ] Created slice system-org.openbmc.buttons.reset.slice.
+[  OK  ] Created slice system-obmc\x2dread\x2deeprom.slice.
+[  OK  ] Created slice system-org.openbmc.control.Power.slice.
+         Starting udev Coldplug all Devices...
+[  OK  ] Created slice system-org.openbmc.buttons.Power.slice.
+[  OK  ] Created slice system-org.openbmc.control.Host.slice.
+[  OK  ] Created slice system-op\x2dreset\x2dchassis\x2drunning.slice.
+         Mounting Debug File System...
+[  OK  ] Created slice system-phosphor\x2dreset\x2dhost\x2dcheck.slice.
+[  OK  ] Created slice system-obmc\x2dflash\x2dbmc\x2dsetenv.slice.
+[  OK  ] Created slice system-op\x2dreset\x2dchassis\x2don.slice.
+         Starting Remount Root and Kernel File Systems...
+[  OK  ] Created slice system-obmc\x2dsync\x2dinventory\x2ditem.slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+         Starting Journal Service...
+[  OK  ] Created slice system-mapper\x2dwait.slice.
+         Starting Apply Kernel Variables...
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Reached target Slices.
+[   18.290000] systemd[1]: Created slice system-obmc\x2dled\x2dgroup\x2dstart.slice.
+[  OK  ] Created slice system-obmc\x2dled\x2dgroup\x2dstart.slice.
+[   18.370000] systemd[1]: Mounting Temporary Directory...
+         Mounting Temporary Directory...
+[   18.370000] systemd[1]: Mounted Debug File System.
+[  OK  ] Mounted Debug File System.
+[   18.460000] systemd[1]: Started Remount Root and Kernel File Systems.
+[  OK  ] Started Remount Root and Kernel File Systems.
+[   18.550000] systemd[1]: Started Apply Kernel Variables.
+[  OK  ] Started Apply Kernel Variables.
+[   18.650000] systemd[1]: Mounted Temporary Directory.
+[  OK  ] Mounted Temporary Directory.
+[   18.760000] systemd[1]: Starting Create Static Device Nodes in /dev...
+         Starting Create Static Device Nodes in /dev...
+[   19.120000] systemd[1]: Started Journal Service.
+[  OK  ] Started Journal Service.
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Started Create Static Device Nodes in /dev.
+         Starting udev Kernel Device Manager...
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /var/volatile...
+[  OK  ] Mounted /var/volatile.
+         Starting Load/Save Random Seed...
+[  OK  ] Reached target Local File Systems.
+[  OK  ] Started Load/Save Random Seed.
+[   20.400000] systemd-journald[547]: Received request to flush runtime journal from PID 1
+[  OK  ] Started Flush Journal to Persistent Storage.
+         Starting Create Volatile Files and Directories...
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Started Create Volatile Files and Directories.
+         Starting Network Time Synchronization...
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Found device /dev/ttyS4.
+[  OK  ] Found device /dev/ttyVUART0.
+[  OK  ] Reached target System Time Synchronized.
+[  OK  ] Created slice system-xyz.openbmc_project.Hwmon.slice.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on Phosphor Webserver socket.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on Phosphor Host Console SSH Per-Connection socket.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Listening on phosphor-ipmi-net.socket.
+[  OK  ] Listening on Phosphor DBUS Browser socket.
+[  OK  ] Listening on dropbear.socket.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting Phosphor Inventory Manager...
+         Starting Phosphor DBus Service Discovery Manager...
+         Starting Set U-Boot environment variable...
+         Starting Sync system/chassis/motherboard...
+[  OK  ] Started Kernel Logging Service.
+         Starting Phosphor Dump Manager...
+[  OK  ] Started System Logging Service.
+[  OK  ] Started Hardware RNG Entropy Gatherer Daemon.
+         Starting Phosphor Settings Daemon...
+         Starting Clear one time boot overrides...
+         Starting Phosphor Download Manager...
+[  OK  ] Started Phosphor Console Muxer listening on device /dev/ttyVUART0.
+[  OK  ] Started Phosphor Dump core monitor..
+         Starting Phosphor Fan Control...
+         Starting Phosphor Log Manager...
+[  OK  ] Reached target Containers.
+         Starting Phosphor IPMI BT DBus Bridge...
+         Starting Avahi mDNS/DNS-SD Stack...
+         Starting Phosphor Sensor Manager...
+         Starting Phosphor LED Group Management Daemon...
+         Starting Phosphor Inventory Manager...
+[  OK  ] Started D-Bus System Message Bus.
+[  OK  ] Started Phosphor LED Group Management Daemon.
+[  OK  ] Started Phosphor Log Manager.
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+[  OK  ] Started Phosphor IPMI BT DBus Bridge.
+[  OK  ] Started Phosphor Inventory Manager.
+[  OK  ] Started Phosphor Fan Control.
+[  OK  ] Reached target Fan Control.
+         Starting Network Service...
+         Starting Phosphor Chassis0 Control...
+         Starting Phosphor Download Manager...
+         Starting Phosphor User Manager...
+         Starting Phosphor Network Manager...
+         Starting Phosphor BMC0 Control...
+[  OK  ] Started Set U-Boot environment variable.
+[  OK  ] Started Clear one time boot overrides.
+[  OK  ] Started Phosphor Settings Daemon.
+[  OK  ] Started Phosphor Dump Manager.
+[  OK  ] Started Phosphor Download Manager.
+[  OK  ] Created slice system-xyz.openbmc_project.led.controller.slice.
+[  OK  ] Started Phosphor sysfs LED controller.
+[  OK  ] Started Phosphor sysfs LED controller.
+[  OK  ] Started Phosphor sysfs LED controller.
+[  OK  ] Started Phosphor sysfs LED controller.
+         Starting Remount the ubi volume after a reboot...
+[  OK  ] Started Network Service.
+[  OK  ] Reached target Network.
+[  OK  ] Started Lightweight SLP Server.
+         Starting Permit User Sessions...
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started Serial Getty on ttyS4.
+[  OK  ] Reached target Login Prompts.
+[   51.200000] 8021q: adding VLAN 0 to HW filter on device eth0
+[  OK  ] Started Phosphor BMC0 Control.
+[  OK  ] Started Remount the ubi volume after a reboot.
+[  OK  ] Reached target Multi-User System.
+[   53.380000] ftgmac100 1e660000.ethernet eth0: NCSI interface down
+
+Phosphor OpenBMC (Phosphor OpenBMC Project Reference Distro) 0.1.0 barreleye ttyS4
+
+barreleye login: root
+Password: 
+root@barreleye:~# sensors
+-sh: sensors: command not found
+root@barreleye:~# dmesg | head -n 10
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.10.17-703c3c181790b20c48c4d02b9fed901379671fb7 (funnystory@open7
+[    0.000000] CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=0005317f
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] OF: fdt:Machine model: Barrelye BMC
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] SOC Rev: 02010303
+[    0.000000] On node 0 totalpages: 63488
+[    0.000000] free_area_init_node: node 0, pgdat 80833d14, node_mem_map 8f60a000
+[    0.000000]   Normal zone: 496 pages used for memmap
+root@barreleye:~# se
+sed                  seq                  setfont              setmetamode
+select               set                  setkeycodes          settings_manager.py
+sensor_manager2.py   setconsole           setleds              setvtrgb
+root@barreleye:~# se
+sed                  seq                  setfont              setmetamode
+select               set                  setkeycodes          settings_manager.py
+sensor_manager2.py   setconsole           setleds              setvtrgb
+root@barreleye:~# se
+sed                  seq                  setfont              setmetamode
+select               set                  setkeycodes          settings_manager.py
+sensor_manager2.py   setconsole           setleds              setvtrgb
+root@barreleye:~# sensor_manager2.py 
+
+
+vSetting boot count to 3
+Starting sensor manager
+i^H^H^H^H^H
+
+
+
+^Z
+[1]+  Stopped(SIGTSTP)        sensor_manager2.py
+^Xroot@barreleye:~# ^C
+root@barreleye:~# demsg
+-sh: demsg: command not found
+root@barreleye:~# dmesg
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.10.17-703c3c181790b20c48c4d02b9fed901379671fb7 (funnystory@open7
+[    0.000000] CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=0005317f
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] OF: fdt:Machine model: Barrelye BMC
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] SOC Rev: 02010303
+[    0.000000] On node 0 totalpages: 63488
+[    0.000000] free_area_init_node: node 0, pgdat 80833d14, node_mem_map 8f60a000
+[    0.000000]   Normal zone: 496 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 63488 pages, LIFO batch:15
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 62992
+[    0.000000] Kernel command line: console=ttyS4,115200n8 root=/dev/ram rw
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 242472K/253952K available (4096K kernel code, 277K rwdata, 1104K rodata)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0x90000000 - 0xff800000   (1784 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x8f800000   ( 248 MB)
+[    0.000000]       .text : 0x80008000 - 0x80500000   (5088 kB)
+[    0.000000]       .init : 0x80700000 - 0x80800000   (1024 kB)
+[    0.000000]       .data : 0x80800000 - 0x808455a8   ( 278 kB)
+[    0.000000]        .bss : 0x808455a8 - 0x80861560   ( 112 kB)
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] i2c controller registered, irq 16
+[    0.000000] clocksource: moxart_timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_nss
+[    0.000000] sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 214748364750s
+[    0.070000] Calibrating delay loop... 190.87 BogoMIPS (lpj=954368)
+[    0.070000] pid_max: default: 32768 minimum: 301
+[    0.070000] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.070000] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.070000] CPU: Testing write buffer coherency: ok
+[    0.070000] ftrace: allocating 14748 entries in 44 pages
+[    0.130000] Setting up static identity map for 0x40100000 - 0x40100058
+[    0.140000] devtmpfs: initialized
+[    0.180000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 191s
+[    0.180000] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.180000] pinctrl core: initialized pinctrl subsystem
+[    0.180000] NET: Registered protocol family 16
+[    0.180000] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.270000] clocksource: Switched to clocksource moxart_timer
+[    0.310000] NET: Registered protocol family 2
+[    0.310000] TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.310000] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.310000] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.310000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.310000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.310000] NET: Registered protocol family 1
+[    0.310000] Trying to unpack rootfs image as initramfs...
+[    4.710000] Freeing initrd memory: 1548K
+[    4.710000] workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[    4.710000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    4.710000] jffs2: version 2.2. (NAND) (SUMMARY)  �© 2001-2006 Red Hat, Inc.
+[    4.710000] io scheduler noop registered (default)
+[    4.960000] ipmi-bt-host 1e789140.ibt: Found bt bmc device
+[    4.960000] ipmi-bt-host 1e789140.ibt: Using IRQ 21
+[    4.960000] Serial: 8250/16550 driver, 6 ports, IRQ sharing enabled
+[    4.960000] 1e787000.vuart: ttyS5 at MMIO 0x1e787000 (irq = 21, base_baud = 1500000) is a 1A
+[    4.960000] 1e784000.serial: ttyS4 at MMIO 0x1e784000 (irq = 22, base_baud = 1500000) is a A
+[    5.220000] console [ttyS4] enabled
+[    5.520000] timeriomem_rng 1e6e2078.hwrng: 32bits from 0xf00e2078 @ 1us
+[    5.540000] random: fast init done
+[    5.600000] brd: module loaded
+[    5.640000] loop: module loaded
+[    5.650000] aspeed-smc 1e620000.fmc: Using IRQ 18
+[    5.660000] aspeed-smc 1e620000.fmc: DMA support disabled.
+[    5.660000] aspeed-smc 1e620000.fmc: n25q256a (32768 Kbytes)
+[    5.660000] aspeed-smc 1e620000.fmc: CE0 window [ 0x20000000 - 0x22000000 ] 32MB
+[    5.680000] aspeed-smc 1e620000.fmc: CE1 window [ 0x22000000 - 0x26000000 ] 64MB
+[    5.680000] 5 ofpart partitions found on MTD device bmc
+[    5.680000] Creating 5 MTD partitions on "bmc":
+[    5.710000] 0x000000000000-0x000000060000 : "u-boot"
+[    5.710000] random: crng init done
+[    5.720000] 0x000000060000-0x000000080000 : "u-boot-env"
+[    5.730000] 0x000000080000-0x0000004c0000 : "kernel"
+[    5.750000] 0x0000004c0000-0x000001c00000 : "rofs"
+[    5.750000] 0x000001c00000-0x000002000000 : "rwfs"
+[    5.780000] aspeed-smc 1e630000.spi: unrecognized JEDEC id bytes: 00, 00, 00
+[    5.780000] aspeed-smc 1e630000.spi: Aspeed SMC probe failed -2
+[    5.810000] aspeed-smc: probe of 1e630000.spi failed with error -2
+[    5.810000] libphy: Fixed MDIO Bus: probed
+[    5.830000] ftgmac100 1e660000.ethernet: Read MAC address 00:01:73:02:48:9f from chip
+[    5.830000] ftgmac100 1e660000.ethernet: Using NCSI interface
+[    5.830000] ftgmac100 1e660000.ethernet eth0: irq 19, mapped at f0060000
+[    5.860000] i2c /dev entries driver
+[    5.900000] rtc-ds1307: probe of 0-0068 failed with error -5
+[    5.910000] aspeed-i2c-bus 1e78a040.i2c-bus: i2c bus 0 registered, irq 23
+[    5.910000] aspeed-i2c-bus 1e78a100.i2c-bus: i2c bus 3 registered, irq 24
+[    5.960000] aspeed-i2c-bus 1e78a140.i2c-bus: i2c bus 4 registered, irq 25
+[    5.960000] aspeed-i2c-bus 1e78a180.i2c-bus: i2c bus 5 registered, irq 26
+[    6.040000] aspeed-i2c-bus 1e78a1c0.i2c-bus: i2c bus 6 registered, irq 27
+[    6.040000] Driver for 1-wire Dallas network protocol.
+[    6.060000] adm1275 4-0010: Failed to read Manufacturer ID
+[    6.070000] adm1275 5-0010: Failed to read Manufacturer ID
+[    6.080000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    6.080000] NET: Registered protocol family 10
+[    6.080000] Segment Routing with IPv6
+[    6.110000] NET: Registered protocol family 17
+[    6.110000] 8021q: 802.1Q VLAN Support v1.8
+[    6.110000] hctosys: unable to open rtc device (rtc0)
+[    6.110000] Freeing unused kernel memory: 1024K
+[    8.910000] jffs2: notice: (431) jffs2_build_xattr_subsystem: complete building xattr subsy.
+[   13.040000] systemd[1]: System time before build time, advancing clock.
+[   13.040000] systemd[1]: systemd 232 running in system mode. (+PAM -AUDIT -SELINUX -IMA -APP)
+[   13.040000] systemd[1]: Detected architecture arm.
+[   13.540000] systemd[1]: Set hostname to <barreleye>.
+[   14.900000] systemd[1]: Cannot add dependency obmc-sync-inventory-item@system-chassis-io_bot
+[   15.850000] systemd[1]: Listening on Network Service Netlink Socket.
+[   16.060000] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[   16.120000] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[   16.160000] systemd[1]: Listening on Journal Socket (/dev/log).
+[   16.200000] systemd[1]: Listening on udev Kernel Socket.
+[   16.240000] systemd[1]: Listening on udev Control Socket.
+[   18.290000] systemd[1]: Created slice system-obmc\x2dled\x
