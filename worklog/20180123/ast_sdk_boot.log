@@ -1,0 +1,194 @@
+U-Boot 2017.01.sdk-v00.04.00 (Jan 23 2018 - 15:00:03 +0900)
+
+SOC : AST2400-A1
+RST : WDT1
+PLL :     24 MHz
+CPU :    384 MHz
+MEM :    384 MHz, EEC:Disable [init by SOC]
+VGA :    8 MiB - Total DRAM : 256 MiB
+LPC Mode : SuperIO-2e
+I2C:   ready
+DRAM:  176 MiB
+WARNING: Caches not enabled
+Flash:
+FMC : CS0 20000000: 32MB 32 MiB
+In:    serial
+Out:   serial
+Err:   serial
+Net:   MAC0 : RGMII
+MAC1 : RMII/NCSI
+FTGMAC100#0, FTGMAC100#1
+Hit any key to stop autoboot:  0
+## Booting kernel from Legacy Image at 20080000 ...
+   Image Name:   Linux-4.9.0.sdk-v00.04.00
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2418032 Bytes = 2.3 MiB
+   Load Address: 40008000
+   Entry Point:  40008000
+   Verifying Checksum ... OK
+## Loading init Ramdisk from Legacy Image at 20400000 ...
+   Image Name:
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    14383359 Bytes = 13.7 MiB
+   Load Address: fffffff2
+   Entry Point:  fffffff2
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 49d90000, end 4ab478ff ... OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Booting Linux on physical CPU 0x0
+Linux version 4.9.0.sdk-v00.04.00 (funnystory@funnystory-ThinkPad-X1-Carbon-3rd) (gcc version 4.5.4 (crosstool-NG crosstool-ng-1.22.0) ) #11 Tue Jan 23 15:02:41 KST 2018
+CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=0005317f
+CPU: VIVT data cache, VIVT instruction cache
+Machine: AST-G4
+Memory policy: Data cache writeback
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 44704
+Kernel command line: console=ttyS0,115200n8 root=/dev/ram rw ramdisk_size=65536 init=/sbin/init
+PID hash table entries: 1024 (order: 0, 4096 bytes)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Memory: 159936K/180224K available (3194K kernel code, 247K rwdata, 856K rodata, 168K init, 84K bss, 20288K reserved, 0K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xcb800000 - 0xff800000   ( 832 MB)
+    lowmem  : 0xc0000000 - 0xcb000000   ( 176 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0326e68   (3196 kB)
+      .init : 0xc03fe000 - 0xc0428000   ( 168 kB)
+      .data : 0xc0428000 - 0xc0465c60   ( 248 kB)
+       .bss : 0xc0465c60 - 0xc047af50   (  85 kB)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS:752
+sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836475000000ns
+Console: colour dummy device 80x30
+Calibrating delay loop... 190.87 BogoMIPS (lpj=954368)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x40008400 - 0x4000843c
+VFP support v0.3: not present
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+AST GPIO Driver, (c) ASPEED Tech. Inc.
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+CPU = 384 MHz ,AHB = 192 MHz, PCLK = 192 Mhz (div : 2:32)
+fmc-spi fmc-spi.0: master is unqueued, this is deprecated
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+NET: Registered protocol family 2
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+Trying to unpack rootfs image as initramfs...
+rootfs image is not initramfs (no cpio magic); looks like an initrd
+Freeing initrd memory: 14048K (c9d90000 - cab48000)
+futex hash table entries: 256 (order: -1, 3072 bytes)
+workingset: timestamp_bits=30 max_order=16 bucket_order=0
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+ast_video: driver successfully loaded.
+ast_kcs.0: driver successfully loaded.
+ast_kcs.1: driver successfully loaded.
+ast_kcs.2: driver successfully loaded.
+ast_kcs.3: driver successfully loaded.
+ast_kcs.4: driver successfully loaded.
+ast_bt.0: driver successfully loaded.
+change to IDLE
+ast_bt.1: driver successfully loaded.
+ast_snoop_probe(): ast_snoop_probe
+ast_snoop.0: driver successfully loaded.
+ast_snoop_probe(): ast_snoop_probe
+ast_snoop.1: driver successfully loaded.
+ast_snoop_dma_probe(): ast_snoop_dma_probe
+ast_snoop_dma_probe(): dma addr 48b7e000
+ast_snoop_dma.0: driver successfully loaded.
+ast_peci: driver successfully loaded.
+ast_mbx: driver successfully loaded.
+ast_jtag: driver successfully loaded.
+ast_mctp: driver successfully loaded.
+ast_xdma: driver successfully loaded.
+Serial: 8250/16550 driver, 3 ports, IRQ sharing enabled
+console [ttyS0] disabled
+serial8250.0: ttyS0 at MMIO 0x1e784000 (irq = 10, base_baud = 1500000) is a 16550A
+console [ttyS0] enabled
+serial8250.0: ttyS1 at MMIO 0x1e78e000 (irq = 33, base_baud = 1500000) is a 16550A
+serial8250.0: ttyS2 at MMIO 0x1e78f000 (irq = 34, base_baud = 1500000) is a 16550A
+brd: module loaded
+loop: module loaded
+m25p80 spi0.0: unrecognized JEDEC id bytes: 00, 00, 00
+Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)
+libphy: Fixed MDIO Bus: probed
+MAC0 : RGMII
+MAC1 : RMII/NCSI
+netif_napi_add() called with weight 256 on device eth%d
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-ast ehci-ast.0: ASPEED On-Chip EHCI Host Controller
+ehci-ast ehci-ast.0: new USB bus registered, assigned bus number 1
+ehci-ast ehci-ast.0: irq 5, io base 0x1e6a1000
+ehci-ast ehci-ast.0: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+uhci_hcd: USB Universal Host Controller Interface driver
+platform-uhci platform-uhci.0: Generic UHCI Host Controller
+platform-uhci platform-uhci.0: new USB bus registered, assigned bus number 2
+platform-uhci platform-uhci.0: irq 14, io mem 0x1e6b0000
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 4 ports detected
+usbcore: registered new interface driver usb-storage
+i2c /dev entries driver
+I2C: ast_i2c.0: AST I2C adapter [100 khz]
+I2C: ast_i2c.1: AST I2C adapter [100 khz]
+I2C: ast_i2c.2: AST I2C adapter [100 khz]
+I2C: ast_i2c.3: AST I2C adapter [100 khz]
+I2C: ast_i2c.4: AST I2C adapter [100 khz]
+I2C: ast_i2c.5: AST I2C adapter [100 khz]
+I2C: ast_i2c.6: AST I2C adapter [100 khz]
+I2C: ast_i2c.7: AST I2C adapter [100 khz]
+I2C: ast_i2c.8: AST I2C adapter [100 khz]
+I2C: ast_i2c.9: AST I2C adapter [100 khz]
+I2C: ast_i2c.10: AST I2C adapter [100 khz]
+I2C: ast_i2c.11: AST I2C adapter [100 khz]
+I2C: ast_i2c.12: AST I2C adapter [100 khz]
+I2C: ast_i2c.13: AST I2C adapter [100 khz]
+ast_adc: driver successfully loaded.
+ast_pwm_tacho: driver successfully loaded.
+success to register interrupt for INT_WDT (27)
+AST WDT is installed.(irq = 27, heartbeat = 6 secs, nowayout = 0)
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ipip: IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+RAMDISK: gzip image found at block 0
+random: fast init done
+VFS: Mounted root (ext2 filesystem) on device 1:0.
+Freeing unused kernel memory: 168K (c03fe000 - c0428000)
+This architecture does not have kernel memory protection.
+bonding: bond0 is being deleted...
+bond0 (unregistering): Released all slaves
+bonding: unable to delete non-existent bond0
+bonding: bond0 is being created...
+bond0: Setting MII monitoring interval to 100
+bond0: Setting use_carrier to 0
+bond0: Adding slave eth0
+bond0: no link monitoring support for eth0
+: eth0:ftgmac100_open
+bond0: MII and ETHTOOL support not available for interface eth0, and arp_interval/arp_ip_target module parameters not specified, thus bonding will not detect link failures! see bonding.txt for details
+bond0: making interface eth0 the new active one
+bond0: Enslaving eth0 as an active interface with an up link
+bond0: Adding slave eth1
+bond0: no link monitoring support for eth1
+: eth1:ftgmac100_open
+bond0: MII and ETHTOOL support not available for interface eth1, and arp_interval/arp_ip_target module parameters not specified, thus bonding will not detect link failures! see bonding.txt for details
+bond0: Enslaving eth1 as a backup interface with an up link
+random: crng init done

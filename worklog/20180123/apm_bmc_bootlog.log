@@ -1,0 +1,437 @@
+Welcome to minicom 2.7
+
+OPTIONS: I18n
+Compiled on Feb  7 2016, 13:37:27.
+Port /dev/ttyUSB5, 18:51:49
+
+Press CTRL-A Z for help on special keys
+
+
+DRAM Init-DDR3
+CBR0-1234567012345670123456701234567
+CBR134Done
+
+
+U-Boot 2013.07 (Feb 18 2016 - 15:50:52)
+
+I2C:   ready
+DRAM:  240 MiB
+Flash: Found SPI Chip Micron N25Q256A
+32 MiB
+MMC:   ast_sd: 0, ast_sd: 1
+Net:   ast_eth0, ast_eth1
+DRAM ECC disabled
+Hit any key to stop autoboot:  0
+Un-Protected 1 sectors
+Erasing Flash...
+Erasing sector  4 ... ok.
+Erased 1 sectors
+Writing to Flash... done
+Protected 1 sectors
+Image to be booted is 1
+conf @ /dev/mtdblock1 Address 20060000
+conf @ /dev/mtdblock2 Address 200e0000
+Found Root File System @ /dev/mtdblock3
+Root File System is CRAMFS
+root @ /dev/mtdblock3 Address 20160000
+www @ /dev/mtdblock4 Address 211d0000
+Un-Protect Flash Bank # 1
+Booting from MODULE_PIMAGE ...
+Bootargs = [root=/dev/mtdblock3 ro ip=none mem=240M console=ttyS4,115200 rootfstype=cramfs bigphysarea=61]
+## Booting kernel from Legacy Image at 40100000 ...
+   Image Name:   Linux-3.14.17-ami
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    3482704 Bytes = 3.3 MiB
+   Load Address: 40008000
+   Entry Point:  40008000
+   Loading Kernel Image ... OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 3.14.17-ami (AMI@localhost) (gcc version 4.6.1 (Sourcery CodeBench Lite 20116
+[    0.000000] CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=00053177
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] Machine: AST2400EVB
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 60960
+[    0.000000] Kernel command line: root=/dev/mtdblock3 ro ip=none mem=240M console=ttyS4,115200 rootfsty1
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 213060K/245760K available (3558K kernel code, 196K rwdata, 1108K rodata, 929K init)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xcf800000 - 0xff000000   ( 760 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xcf000000   ( 240 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc0496e54   (4668 kB)
+[    0.000000]       .init : 0xc0497000 - 0xc057f62c   ( 930 kB)
+[    0.000000]       .data : 0xc0580000 - 0xc05b1240   ( 197 kB)
+[    0.000000]        .bss : 0xc05b1240 - 0xc05d0370   ( 125 kB)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:51
+[    0.000000] AST Interrupt Controller Enabled
+[    0.000000] AST Timer Enabled
+[    0.000000] sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836480000000ns
+[    0.000000] Console: colour dummy device 80x30
+[    0.120000] console [ttyS4] enabled
+[    0.120000] Calibrating delay loop... 190.87 BogoMIPS (lpj=954368)
+[    0.210000] pid_max: default: 32768 minimum: 301
+[    0.210000] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.220000] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.230000] CPU: Testing write buffer coherency: ok
+[    0.230000] Setting up static identity map for 0x4037fc20 - 0x4037fc5c
+[    0.250000] NET: Registered protocol family 16
+[    0.250000] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.340000] bio: create slab <bio-0> at 0
+[    0.430000] NET: Registered protocol family 2
+[    0.430000] TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.440000] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.450000] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.450000] TCP: reno registered
+[    0.460000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.460000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.470000] NET: Registered protocol family 1
+[    0.480000] RPC: Registered named UNIX socket transport module.
+[    0.480000] RPC: Registered udp transport module.
+[    0.490000] RPC: Registered tcp transport module.
+[    0.490000] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.690000] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.740000] bigphysarea: Allocated 6144 pages at 0xcd60f000.
+[    0.760000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.780000] NFS: Registering the id_resolver key type
+[    0.780000] Key type id_resolver registered
+[    0.790000] Key type id_legacy registered
+[    0.800000] jffs2: version 2.2. �© 2001-2006 Red Hat, Inc.
+[    0.810000] msgmni has been set to 416
+[    0.830000] alg: No test for stdrng (krng)
+[    0.830000] io scheduler noop registered (default)
+[    0.870000] Serial: 8250/16550 driver, 5 ports, IRQ sharing disabled
+[    0.880000] serial8250: ttyS0 at MMIO 0x1e783000 (irq = 9, base_baud = 1500000) is a 16550A
+[    0.900000] serial8250: ttyS1 at MMIO 0x1e78d000 (irq = 32, base_baud = 1500000) is a 16550A
+[    0.920000] serial8250: ttyS2 at MMIO 0x1e78e000 (irq = 33, base_baud = 1500000) is a 16550A
+[    0.940000] serial8250: ttyS3 at MMIO 0x1e78f000 (irq = 34, base_baud = 1500000) is a 16550A
+[    0.960000] serial8250: ttyS4 at MMIO 0x1e784000 (irq = 10, base_baud = 1500000) is a 16550A
+[    1.010000] brd: module loaded
+[    1.040000] loop: module loaded
+[    1.040000] Ractrends Flash mapping: 0x02000000 at 0x20000000
+[    1.050000] Flash total banks (2)
+[    1.050000] Probing for Flash at Bank # 0
+[    1.060000] SPI: probing for micron devices ...
+[    1.060000] Found SPI Chip Micron N25Q256A
+[    1.070000] Probing for Flash at Bank # 1
+[    1.070000] SPI: probing for micron devices ...
+[    1.070000] SPI: probing for winbond devices ...
+[    1.080000] SPI: probing for intel s33 devices ...
+[    1.080000] SPI: probing for atmel devices ...
+[    1.090000] SPI: probing for macronix devices ...
+[    1.090000] SPI: probing for spansion devices ...
+[    1.100000] SPI: probing for m25pxx devices ...
+[    1.100000] Ractrends: No spi compatible flash device found
+[    1.110000] *PartCount is 0
+[    1.110000] MTD Partition 0 : fullpart @ 0x0 of Size 0x2000000
+[    1.120000] MTD Partition 1 : conf @ 0x60000 of Size 0x70000
+[    1.120000] MTD Partition 2 : conf @ 0xe0000 of Size 0x70000
+[    1.130000] MTD Partition 3 : root @ 0x160000 of Size 0xd00000
+[    1.130000] MTD Partition 4 : www @ 0x11d0000 of Size 0x240000
+[    1.150000] Creating 5 MTD partitions on "Ractrends":
+[    1.150000] 0x000000000000-0x000002000000 : "fullpart"
+[    1.160000] 0x000000060000-0x0000000d0000 : "conf"
+[    1.170000] 0x0000000e0000-0x000000150000 : "conf"
+[    1.180000] 0x000000160000-0x000000e60000 : "root"
+[    1.190000] 0x0000011d0000-0x000001410000 : "www"
+[    1.200000] bonding: Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)
+[    1.250000] i2c /dev entries driver
+[    1.250000] sdhci: Secure Digital Host Controller Interface driver
+[    1.260000] sdhci: Copyright(c) Pierre Ossman
+[    1.350000] mmc0: SDHCI controller on ast_sdhci1 [ast_sdhci1.0] using DMA
+[    1.400000] mmc1: SDHCI controller on ast_sdhci2 [ast_sdhci2.0] using DMA
+[    1.410000] AST SoC SD/MMC Driver Init Success
+[    1.410000] Netfilter messages via NETLINK v0.30.
+[    1.430000] nfnl_acct: registering with nfnetlink.
+[    1.440000] xt_time: kernel timezone is -0000
+[    1.440000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    1.450000] arp_tables: (C) 2002 David S. Miller
+[    1.450000] TCP: cubic registered
+[    1.460000] NET: Registered protocol family 10
+[    1.470000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    1.480000] sit: IPv6 over IPv4 tunneling driver
+[    1.490000] NET: Registered protocol family 17
+[    1.490000] 8021q: 802.1Q VLAN Support v1.8
+[    1.500000] Key type dns_resolver registered
+[    1.510000] Freeing unused kernel memory: 928K (c0497000 - c057f000)
+Unpacking initramfs ...
+Mounting /dev/mtdblock3 with option ro
+INIT: version 2.88 booting
+Sat Jan  1 00:00:00 UTC 2000
+Starting PAM Helper Daemon: PAMHelperD .
+kernel.panic = 5
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_max_syn_backlog = 2048
+net.ipv4.tcp_synack_retries = 3
+License App startedStarting Execution Daemon.
+[   14.630000] random: nonblocking pool is initialized
+Starting Process Manager.
+Setting the network link mode as specified in the configuration file - /conf/phycfg.conf ...
+[   17.650000] IPv6: ADDRCONF(NETDEV_UP): lo: link is not ready
+[   17.650000] IPv6: ADDRCONF(NETDEV_UP): bond0: link is not ready
+[   17.660000] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   17.660000] IPv6: ADDRCONF(NETDEV_UP): eth1: link is not ready
+[   17.670000] IPv6: ADDRCONF(NETDEV_UP): sit0: link is not ready
+[   17.680000] IPv6: ADDRCONF(NETDEV_UP): ip6tnl0: link is not ready
+[   17.870000] Helper Module Driver Version 1.2
+[   17.870000] Copyright (c) 2009-2015 American Megatrends Inc.
+[   17.880000] NCSI Interface Driver Version 1.1
+[   17.890000] Copyright (c) 2009-2015 American Megatrends Inc.
+[   17.900000] NCSI(eth0): Detect NCSI Packages and Channels
+[   17.980000] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   17.990000] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   22.190000] NCSI(eth1): Detect NCSI Packages and Channels
+[   22.250000] NCSI(eth1): Error! Mac Address is 0. Cannot enable NCSI
+Enabling User Specified NCSI Port ...
+[   22.380000] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   22.420000] IPv6: ADDRCONF(NETDEV_UP): eth1: link is not ready
+mount: mounting /dev/mmcblk0p1 on /mnt/sdmmc0p1 failed: No such file or directory
+mount: mounting /dev/mmcblk0p2 on /mnt/sdmmc0p2 failed: No such file or directory
+mount: mounting /dev/mmcblk0p3 on /mnt/sdmmc0p3 failed: No such file or directory
+mount: mounting /dev/mmcblk0p4 on /mnt/sdmmc0p4 failed: No such file or directory
+mount: mounting /dev/mmcblk0p5 on /mnt/sdmmc0p5 failed: No such file or directory
+mount: mounting /dev/mmcblk0p6 on /mnt/sdmmc0p6 failed: No such file or directory
+mount: mounting /dev/mmcblk0p7 on /mnt/sdmmc0p7 failed: No such file or directory
+[   22.740000] bonding: bond0 is being deleted...
+[   22.740000] bonding: bond0: released all slaves
+Interface lo is going to go up
+Interface lo is up
+IPv6 entry is not present in interfaces file
+Interface bond0 is going to go up
+[   23.700000] bonding: unable to delete non-existent bond0
+sh: write error:[   23.710000] bonding: bond0 is being created...
+ No such device
+[   23.820000] bonding: bond0: Setting MII monitoring interval to 100.
+[   23.880000] bonding: bond0: Setting use_carrier to 0.
+[   23.960000] bonding: bond0: Adding slave eth0.
+[   23.960000] bonding: bond0: Warning: The first slave device specified does not support setting the MAC.
+[   23.970000] bonding: bond0: Setting fail_over_mac to active for active-backup mode.
+[   24.170000] bonding: bond0: making interface eth0 the new active one.
+[   24.180000] bonding: bond0: enslaving eth0 as an active interface with an up link.
+[   24.210000] bonding: bond0: Adding slave eth1.
+[   24.270000] IPv6: ADDRCONF(NETDEV_UP): eth1: link is not ready
+[   24.350000] bonding: bond0: enslaving eth1 as a backup interface with a down link.
+bond0 of type 1 created with interfaces eth0,eth1.
+[   24.440000] 8021q: adding VLAN 0 to HW filter on device bond0
+Calling udhcpc....
+DHCP internal = 0
+udhcpc (v1.21.1) started
+Sending discover...
+Sending select for 192.168.51.159...
+Lease of 192.168.51.159 obtained, lease time 7200
+serverid:  192.168.10.1
+Address   :  192.168.51.159
+Netmask   :  255.255.0.0
+deleting routers
+Router    :  192.168.10.1
+DnsServer :  164.124.101.2
+DnsServer :  203.248.252.2
+No NTP support
+Interface bond0 is up
+DNS Registering AMI00017302489F 192.168.51.159 A 86400
+sh: 0: unknown operand
+grep: /conf/tsig.private: No such file or directory
+[1170 : 1170 WARNING][libnsupdate.c:697] NOTAUTH
+
+[1170 : 1170 WARNING][libnsupdate.c:697] NOTAUTH
+
+[1170 : 1170 WARNING][libnsupdate.c:697] NOTAUTH
+
+Interface bond0 is going to go up
+bond0 has been found in the bonding_masters.
+ calling dhcp6c....
+Interface bond0 is up
+DNS Registering AMI00017302489F 192.168.51.159 A 86400
+sh: 0: unknown operand
+grep: /conf/tsig.private: No such file or directory
+[1297 : 1297 WARNING][libnsupdate.c:697] NOTAUTH
+
+[1297 : 1297 WARNING][libnsupdate.c:697] NOTAUTH
+
+[1297 : 1297 WARNING][libnsupdate.c:697] NOTAUTH
+
+Starting IPMI Stack: IPMIMain [   34.110000] Reset Common Driver, (c) 2009-2015 American Megatrends Inc.
+[   34.130000] KCS Common Driver, (c) 2009-2015 American Megatrends Inc.
+[   34.150000] BT Common Driver, (c) 2009-2015 American Megatrends Inc...
+[   34.160000] BT hw module loaded
+[   34.190000] I2C0: Hardware routines registered
+[   34.190000] Registered bus id: i2c-0
+[   34.220000] I2C1: Hardware routines registered
+[   34.220000] Registered bus id: i2c-1
+[   34.220000] I2C2: Hardware routines registered
+[   34.230000] Registered bus id: i2c-2
+[   34.250000] I2C3: Hardware routines registered
+[   34.250000] Registered bus id: i2c-3
+[   34.280000] I2C4: Hardware routines registered
+[   34.280000] Registered bus id: i2c-4
+[   34.290000] I2C5: Hardware routines registered
+[   34.290000] Registered bus id: i2c-5
+[   34.290000] I2C6: Hardware routines registered
+[   34.300000] Registered bus id: i2c-6
+[   34.320000] I2C7: Hardware routines registered
+[   34.320000] Registered bus id: i2c-7
+[   34.320000] I2C8: Hardware routines registered
+[   34.330000] Registered bus id: i2c-8
+[   34.380000] I2C9: Hardware routines registered
+[   34.380000] Registered bus id: i2c-9
+[   34.380000] I2C10: Hardware routines registered
+[   34.390000] Registered bus id: i2c-10
+[   34.420000] I2C11: Hardware routines registered
+[   34.420000] Registered bus id: i2c-11
+[   34.420000] I2C12: Hardware routines registered
+[   34.430000] Registered bus id: i2c-12
+[   34.470000] I2C13: Hardware routines registered
+[   34.470000] Registered bus id: i2c-13
+[   34.490000] Snoop Common Driver, (c) 2009-2015 American Megatrends Inc.
+[   34.520000] The GPIO Driver is loaded successfully.
+[   34.520000] APSEED AST SoC GPIO HW Driver, (c) 2009-2015 American Megatrends Inc.
+[   34.540000] ADC Driver Version 1.0
+[   34.540000] Copyright (c) 2009-2015 American Megatrends Inc.
+[   34.740000] AST2300/AST2400 ADC HW module loaded
+[   34.740000] The Cipher coprocessor driver loaded successfully
+[   34.770000] Initializing USB Devices
+[   34.770000] USB Device Endpoint Driver
+[   34.780000] Copyright 2006 American Megatrends Inc.
+[   34.790000] USB Driver is Successfully Initialized
+[   34.800000] Loading iUSB Module...
+[   34.840000] Loading CDROM Device Module...
+[   35.940000] Watchdog Common Driver, (c) 2010 American Megatrends Inc.
+[   35.980000] PECI Common Driver, (c) 2009-2015 American Megatrends Inc.
+[   36.010000] Network Interface Monitor Version 2.2.0
+[   36.010000] Copyright (c) 2009-2015 American Megatrends Inc.
+[   36.070000] AST UARTROUTE Driver Version 103.0
+[   36.070000] Copyright (c) 2010 American Megatrends Inc.
+[   36.100000] PWMTACH Common Driver, (c) 2009-2015 American Megatrends Inc.
+[   38.700000] Reset ioctl unlocked
+[1397 : 1397 WARNING][BMCInit.c:208]Power Restore Policy Succeded with always on
+
+PDK LPC Reset is[   41.330000] Reset ioctl unlocked
+ invoked
+[   41.370000] Unable to get Firmware Information
+POWER ON CHASSIS
+[1397 : 1545 CRITICAL][ChassisTimer.c:215]Chassis interrupts handling failed
+
+[1397 : 1397 CRITICAL][IPMI_Main.c:535] Can not open /tmp/threadrestart
+Environment variable recoverysuccess not found!
+.
+Sun Jan  1 00:00:00 EST 2012
+Running ntpdate to synchronize clock :
+Trying NTP Server pool.ntp.org :Success
+starting iptables...
+Restoring normal configuration..
+/conf/iptables.conf Success
+starting ip6tables...
+Success.
+Starting UART Mirror Log application.
+[1658 : 1658 INFO]INFO: UART Logging from device: /dev/ttyS3 into File: /var/sollog/SOLHostCapture.log
+
+Starting OpenSLP server: Stopping the UART Log Rotating Service...
+[1658 : 1668 INFO]Archive Thread: Starting the thread to archive the Serial data from Rolling Buffers upot
+
+[1658 : 1667 INFO]Send Thread: Starting the thread to mirror data from /dev/ttyS3 to (null)
+
+.
+slpd.
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+INIT: Entering runlevel: 3
+Starting NTP server: ntpd.
+Starting enhanced syslogd: rsyslogd.
+Starting DHCP monitor.
+Starting OpenBSD Secure Shell server: sshd.
+sh: : unknown operand
+sh: 0: unknown operand
+[tftp] is enabled.
+/etc/rc3.d/S16tftpd: line 100: arithmetic syntax error
+Starting system message bus: dbusUnknown group "netdev" in message bus configuration file
+.
+Starting SSL tunnels: stunnelClients allowed=500
+stunnel 4.53 on arm-unknown-linux-gnueabi platform
+Compiled/running with OpenSSL 1.0.1e 11 Feb 2013
+Threading:PTHREAD SSL:+ENGINE+OCSP Auth:LIBWRAP Sockets:POLL+IPv6
+Reading configuration from file /etc/stunnel/stunnel.conf
+Compression not enabled
+PRNG seeded successfully
+Initializing inetd mode configuration
+Insecure file permissions on /usr/local/www/certs/privkey.pem
+Certificate: /usr/local/www/certs/server.pem
+Certificate loaded
+Key file: /usr/local/www/certs/privkey.pem
+Private key loaded
+Could not load DH parameters from /usr/local/www/certs/server.pem
+Using hardcoded DH parameters
+DH initialized with 2048-bit key
+ECDH initialized with curve prime256v1
+SSL options set: 0x00000004
+Inetd mode must have 'connect' or 'exec' options
+str_stats: 10 block(s), 191 data byte(s), 420 control byte(s)
+[Failed: /etc/stunnel/stunnel.conf]. Check if pid= is specified in the file
+Starting VM Application: vmapp
+[   67.730000] Loading Floppy Device Module...
+[   68.750000] [sched_delayed] sched: RT throttling activated
+[   68.840000] Loading Hdisk Device Module...
+0
+0
+0
+Stopping CD Redirection Server: cdserver.
+Stopping FD Redirection Server: fdserver.
+Stopping HD Redirection Server: hdserver.
+[   73.390000] dev 0 does not connect to host
+[   74.390000] dev 1 does not connect to host
+[   75.390000] dev 2 does not connect to host
+Starting CD Redirection Server: cdserverStarting FD Redirection Server: fdserverStarting HD Redirection Sr
+Number of Virtual CD Devices = 4
+
+Number of Virtual FD Devices = 4
+
+Number of Virtual HD Devices = 4
+^[[17~SD media PartitionNum = 1
+Stopping Local Media Server.
+SD card Sectors are 0 or SD card not found
+Starting CD Redirection Server: cdserverStarting FD Redirection Server: fdserverStarting HD Redirection S1
+Stopping Local Media Server.
+SD card Sectors are 0 or SD card not found
+Starting Video Redirection Server :adviserd.
+Starting Local Media Server[   95.700000] Loading HID Device Module...
+[   95.710000] UsbConfigureLS(): USB Device 3 is running in Low Speed
+[   96.880000] AST Video Capture Driver, (c) 2009-2015 American Megatrends Inc.
+INFO: LMedia is not enabled ... exiting
+.
+Starting Remote Media Server
+INFO: Remote Media is not enabled ... exiting
+.
+Starting upnp discovery: upnp.
+Starting Firmware Upgrade Utility: flasher.
+MegaRAC Firmware Upgrade Utility
+Copyright (c) 2009-2015 American Megatrends Inc.
+FlashStart      = 0x20000000
+FlashSize       = 0x2000000
+UsedFlashStart  = 0x20000000
+UsedFlashSize   = 0x2000000
+EnvStart        = 0x20040000
+EnvSize         = 0x10000
+Starting to Read Current PostCode buffer...
+No Post Codes ...
+Starting periodic command scheduler: cron.
+Lighttpd configurations exists
+WEB is enabled and port numbers are NON-SSL:0x50 SSL:0x1bb
+2018-01-23 04:54:06: (log.c.164) server started
+Starting lighttpd
+Starting Fail Safe Services for /bkupconf
+Starting Timeout Daemon Utility: timeoutd.
+Starting Boot Complete.
+
+AMI00017302489F login: Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+sysadmin
+Password:
+[2247 : 2247 INFO]SERIAL Login from IP:127.0.0.1 user:sysadm
